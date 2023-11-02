@@ -3,7 +3,7 @@
         {% for nav_item in site.navigation %}
         <li>
             <a href="{{ nav_item.url }}" {% if page.url == nav_item.url %}class="active"{% endif %}>
-                {{ nav_item.title }}A
+                {{ nav_item.title }}
             </a>
         </li>
         {% endfor %}
