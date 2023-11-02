@@ -18,3 +18,13 @@
 .nav-item:not(:last-child) {
     margin-right: 30px;
 }
+
+.custom-header-container {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.custom-header-container h1 {
+    margin-bottom: 40px;
+}
