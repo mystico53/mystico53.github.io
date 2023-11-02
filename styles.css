@@ -12,19 +12,37 @@
     flex-direction: row;
     justify-content: center;
     width: auto;
-    /* Resetting width to auto ensures items are not stretched */
 }
 
 .nav-item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 1.875em;
 }
 
+/* css for all containers */
+.my-products-container,
+.how-i-work-container {
+    padding: 2.25em 6.25em;
+}
+
+/* +++ custom header +++ */
 .custom-header-container {
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 6.25em;
+    margin-left: 6.25em;
+    margin-right: 6.25em;
+
 }
 
 .custom-header-container h1 {
-    margin-bottom: 40px;
+    margin-bottom: 1.5em;
+}
+
+.custom-header-container h4 {
+    margin-bottom: 6.5em;
+
+}
+
+
+/* +++ my products +++ */
+.my-products-container {
+    background-color: lightgray;
 }
