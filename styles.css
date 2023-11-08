@@ -37,12 +37,65 @@
 }
 
 .custom-header-container h4 {
-    margin-bottom: 6.5em;
-
+    margin-bottom: 1.5em;
 }
 
+.custom-header-container p {
+    margin-bottom: 3.5em;
+}
 
 /* +++ my products +++ */
 .my-products-container {
     background-color: lightgray;
 }
+
+
+/* +++ individual products +++ */
+/* General styling for the product page container */
+.product-page-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Styling for h1 elements with the 'h1-product-page' class */
+.h1-product-page {
+    color: #333;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/* Styling for h3 elements with the 'h3-product-page' class */
+.h3-product-page {
+    color: #555;
+    font-size: 1.75em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Styling for p elements with the 'p-product-page' class */
+.p-product-page {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+    .h1-product-page {
+        font-size: 2em;
+    }
+
+    .h3-product-page {
+        font-size: 1.5em;
+    }
+
+    .product-page-container {
+        padding: 10px;
+    }
+}
+
+/* You might want to add additional styles or responsive tweaks as necessary. */
