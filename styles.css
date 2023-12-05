@@ -33,15 +33,20 @@
 }
 
 .custom-header-container h1 {
-    margin-bottom: 1.5em;
+    margin-top: 3.5em;
+    margin-bottom: 3em;
 }
 
 .custom-header-container h4 {
-    margin-bottom: 1.5em;
+    margin-bottom: 6.5em;
 }
 
 .custom-header-container p {
     margin-bottom: 3.5em;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* +++ my products +++ */
@@ -49,6 +54,13 @@
     background-color: lightgray;
 }
 
+.card {
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+}
 
 /* +++ individual products +++ */
 /* General styling for the product page container */
