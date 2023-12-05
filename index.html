@@ -2,31 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>Kon's Product portfolio</title>
+    <title>Kon's Product Portfolio</title>
 
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="styles.css?v=20231005T1300">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=20231005T1301">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/snippets.js"></script>
 </head>
 
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light sticky-top">
 
         <div class="navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
@@ -34,26 +30,44 @@
                     <a class="nav-link" href="#">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">My Products</a>
+                    <a class="nav-link" href="#scrollspyMyProducts">My Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About me</a>
+                    <a class="nav-link" href="#scrollspyAboutMe">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyContact" id="liveToastBtn">Contact me</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
 
+                <strong class="me-auto">Confirmation</strong>
+                <span class="large-emoji">✨</span>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Contacting me is a great idea.
+            </div>
+        </div>
+    </div>
 
 
     <div class="custom-header-container">
-        <h1>Hi, I'm Konstantin.</h1>
+        <h1>Hi there, I'm Konstantin.</h1>
+        <a href="products/junait.html" class="btn btn-primary">Junait page</a>
         <h4>I develop groundbreaking ideas and turn them into first-of-their-kind software products. I steer early
             concepts from inception to sustained growth.</h4>
         <p></p>
     </div>
 
-    <div class="my-products-container" id="my-products">
+
+
+    <div class="my-products-container" id="scrollspyMyProducts">
         <h3>My Products</h3>
         <p>As a product manager with ten years of experience, I have built several highly complex web-applications and
             grew them from 0 to 100 000 users. I specialize in designing fun interactions.</p>
@@ -66,6 +80,7 @@
                         <p class="card-text">With Senaryon I digitized planpolitik’s face-to-face business model. This
                             innovative platform enables interactive, web-based workshops that have fundamentally changed
                             how students learn across the globe.</p>
+
                         <a href="products/senaryon.html" class="btn btn-primary">Dope</a>
 
                     </div>
@@ -73,7 +88,7 @@
             </div>
             <div class="col-md-4 mb-3 mb-sm-2">
                 <div class="card">
-                    <img src="assets\imgs\junait users low res.png" class="card-img-top" alt="example" loading="lazy">
+                    <img src="assets\imgs\square pc.jpg" class="card-img-top" alt="example" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Junait</h5>
                         <p class="card-text">Junait lives very deerly at my heart.</p>
@@ -96,15 +111,33 @@
     </div>
 
 
-    <div class="how-i-work-container">
-        <h1>About me</h1>
+    <div class="about-me-container" id="scrollspyAboutMe">
+        <h3>About</h3>
         <div class="about-img">
             <img src="assets\imgs\about\cropped beach figma.png" class="img-fluid" alt="Kon at the beach with his kids">
         </div>
         <p>When I am not creating new products, I am usually at the beach or in the mountains with my two kids and my
             wife. I am also a passionate chef and love listening to some good Berlin minimal techno while inlineskating
-            at the LA River. At night I like tinkering with new technologies to advance some of my side projects</h3>
+            at the LA River. At night I like tinkering with new technologies to advance some of my side projects</p>
     </div>
+
+    <div class="contact-container" id="scrollspyContact">
+        <h3>Contact me</h3>
+        <p>Feel free to reach out to me if you have an idea you want to talk about. I’m more than happy to help.<br>
+            Send me an email <a
+                href="mailto:your.email@example.com?subject=Contact from Portfolio&body=Hello, I saw your portfolio and..."
+                class="contact-img" target="_blank">
+                <img src="assets/imgs/contact/gmail icon.png" class="img-fluid" alt="Email icon">
+            </a></p>
+        </p>
+
+
+
+
+
+
+    </div>
+
 
 
 

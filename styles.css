@@ -20,7 +20,8 @@
 
 /* css for all containers */
 .my-products-container,
-.how-i-work-container {
+.about-me-container,
+.contact-container {
     padding: 2.25em 6.25em;
 }
 
@@ -45,8 +46,27 @@
     margin-bottom: 3.5em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+    padding-left: 14em;
+    padding-right: 14em;
+}
+
+p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 /* +++ my products +++ */
@@ -55,35 +75,85 @@ body {
 }
 
 .card {
-    padding: 10px;
+    padding: 1em;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
 }
 
 .card-title {
     font-weight: bold;
 }
 
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* This ensures the content is spaced out */
+}
+
+.card-text {
+    align-self: start;
+    /* Aligns the text to the top */
+}
+
+.col-md-4 {
+    display: flex;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* +++ individual products +++ */
 /* General styling for the product page container */
 .product-page-container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
+    padding-left: 8em;
+    padding-right: 8em;
 }
 
 /* Styling for h1 elements with the 'h1-product-page' class */
 .h1-product-page {
     color: #333;
     font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 0.5em;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 2em;
+
+}
+
+.h2-product-page {
+    color: #333;
+    font-size: 1.5em;
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin: 0em;
+
 }
 
 /* Styling for h3 elements with the 'h3-product-page' class */
 .h3-product-page {
-    color: #555;
-    font-size: 1.75em;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 0.75em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0em;
+}
+
+.h4-product-page {
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0em;
 }
 
 /* Styling for p elements with the 'p-product-page' class */
@@ -92,7 +162,89 @@ body {
     font-size: 1em;
     line-height: 1.6;
     text-align: justify;
-    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    margin: 0em;
+}
+
+
+
+.nutshell {
+    background-color: lightgray;
+    padding-top: 2em;
+    border-radius: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.table-span {
+    display: flex;
+    /* Make .nutshell a flex container */
+    justify-content: center;
+    padding: 1em;
+}
+
+.product-table {
+    align-self: right;
+    border-collapse: collapse;
+}
+
+.product-table td,
+.product-table th {
+    text-align: center;
+    padding: 0.3em;
+    padding-left: 3em;
+    padding-right: 2em;
+    border: 1px solid black;
+}
+
+.yt-player {
+    width: 90%;
+    height: 30em;
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+
+.contact-img {
+    display: inline-block;
+    /* Makes the div inline */
+    vertical-align: middle;
+    /* Aligns the image vertically with the text */
+}
+
+.contact-img img {
+    width: 2em;
+    /* Adjust this value as needed to make it bigger than your text */
+    height: auto;
+    /* Maintains the aspect ratio */
+}
+
+.large-emoji {
+    font-size: 2em;
+    /* Adjust the size as needed */
+}
+
+
+
+@media (max-width: 1500px) {
+    body {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .my-products-container {
+        background-color: lightgray;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .product-page-container {
+        padding-left: 8em;
+        padding-right: 8em;
+    }
 }
 
 /* Responsive tweaks for smaller screens */
@@ -108,6 +260,24 @@ body {
     .product-page-container {
         padding: 10px;
     }
+
+    body {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .my-products-container {
+        background-color: lightgray;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .product-page-container {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
+
+
 
 /* You might want to add additional styles or responsive tweaks as necessary. */
