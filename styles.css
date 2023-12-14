@@ -1,3 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 24em;
+    padding-right: 24em;
+}
+
+p {
+    padding-top: 0em;
+    padding-bottom: 0em;
+
+}
+
+h1 {
+    font-size: 2.75em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
 .navbar {
     width: 100%;
 }
@@ -18,6 +55,8 @@
     margin-right: 1.875em;
 }
 
+
+
 /* css for all containers */
 .my-products-container,
 .about-me-container,
@@ -26,179 +65,55 @@
 }
 
 /* +++ custom header +++ */
-.custom-header-container {
-    margin-top: 6.25em;
-    margin-left: 6.25em;
-    margin-right: 6.25em;
-
+.hero-container {
+    background-color: lightgray;
+    padding-top: 12em;
+    padding-bottom: 12em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
 }
 
-.custom-header-container h1 {
-    margin-top: 3.5em;
-    margin-bottom: 3em;
+.hero-container h1 {
+    margin-top: 0.5em;
+    font-size: 4.75em;
+    font-weight: normal;
 }
 
-.custom-header-container h4 {
-    margin-bottom: 6.5em;
-}
-
-.custom-header-container p {
-    margin-bottom: 3.5em;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 14em;
-    padding-right: 14em;
-}
-
-p {
-    padding-top: 1em;
-    padding-bottom: 1em;
-
-}
-
-h3 {
-    font-size: 1.75em;
-    font-weight: bold;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+.blurp {
+    background-color: gray;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
 }
 
 /* +++ my products +++ */
 .my-products-container {
     background-color: lightgray;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
 }
 
-.card {
-    padding: 1em;
-    flex: 1;
-    height: 100%;
-    flex-direction: column;
+.product-section {
+    background-color: gray;
 }
 
-.card-title {
-    font-weight: bold;
+.about-me-container {
+    background-color: gray;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
 }
 
-.card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* This ensures the content is spaced out */
-}
-
-.card-text {
-    align-self: start;
-    /* Aligns the text to the top */
-}
-
-.col-md-4 {
-    display: flex;
-    flex: 1;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* +++ individual products +++ */
-/* General styling for the product page container */
-.product-page-container {
-    padding-left: 8em;
-    padding-right: 8em;
-}
-
-/* Styling for h1 elements with the 'h1-product-page' class */
-.h1-product-page {
-    color: #333;
-    font-size: 2.5em;
-    text-align: left;
-    padding-top: 1em;
-    padding-bottom: 2em;
-
-}
-
-.h2-product-page {
-    color: #333;
-    font-size: 1.5em;
-    text-align: left;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    margin: 0em;
-
-}
-
-/* Styling for h3 elements with the 'h3-product-page' class */
-.h3-product-page {
-    font-size: 2em;
-    font-weight: bold;
-    padding-top: 0.75em;
-    padding-bottom: 0.25em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0em;
-}
-
-.h4-product-page {
-    font-size: 1em;
-    font-weight: bold;
-    padding-top: 0.5em;
-    padding-bottom: 0em;
-    padding-left: 2em;
-    padding-right: 2em;
-    margin: 0em;
-}
-
-/* Styling for p elements with the 'p-product-page' class */
-.p-product-page {
-    color: #666;
-    font-size: 1em;
-    line-height: 1.6;
-    text-align: justify;
-    padding-bottom: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 0.5em;
-    margin: 0em;
-}
-
-
-
-.nutshell {
+.contact-container {
     background-color: lightgray;
-    padding-top: 2em;
-    border-radius: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.table-span {
-    display: flex;
-    /* Make .nutshell a flex container */
-    justify-content: center;
-    padding: 1em;
-}
-
-.product-table {
-    align-self: right;
-    border-collapse: collapse;
-}
-
-.product-table td,
-.product-table th {
-    text-align: center;
-    padding: 0.3em;
-    padding-left: 3em;
-    padding-right: 2em;
-    border: 1px solid black;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
 }
 
 .yt-player {
@@ -227,7 +142,21 @@ h3 {
     /* Adjust the size as needed */
 }
 
+.slide-title {
+    background-color: rgba(71, 71, 71, 0.5);
+    padding: 5px;
+    display: inline-block;
+    font-weight: 700;
+}
 
+.slide-text {
+
+    background-color: rgba(71, 71, 71, 0.5);
+    padding: 5px;
+    display: inline-block;
+
+
+}
 
 @media (max-width: 1500px) {
     body {
