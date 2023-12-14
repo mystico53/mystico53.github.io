@@ -80,7 +80,7 @@ h3 {
 }
 
 .blurp {
-    background-color: gray;
+    background-color: rgb(233, 233, 233);
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
@@ -97,11 +97,11 @@ h3 {
 }
 
 .product-section {
-    background-color: gray;
+    background-color: lightgray;
 }
 
 .about-me-container {
-    background-color: gray;
+    background-color: rgb(233, 233, 233);
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
