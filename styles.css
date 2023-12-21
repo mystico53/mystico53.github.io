@@ -158,6 +158,31 @@ h3 {
 
 }
 
+.laurel-img {
+    /* No need to set display:flex here, because this is for the flex container */
+    flex: 0 0 20%;
+    /* This will set the basis to 15% and grow and shrink to 0 */
+    margin-right: 1rem;
+    /* Add some right margin, you can adjust this value */
+}
+
+/* If you want to set a max-width for image it should not conflict with flex-basis */
+.laurel-img img {
+    width: 100%;
+    /* This will make the image fill its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.contact-img-size {
+    width: 40%;
+    /* 100% - 40% = 60% of the original size */
+    height: auto;
+    /* Maintain the aspect ratio */
+}
+
+
+
 @media (max-width: 1500px) {
     body {
         padding-left: 0em;
