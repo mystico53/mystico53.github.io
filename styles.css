@@ -3,6 +3,8 @@ html {
 }
 
 body {
+    background: #003F88;
+    color: #FFE383;
     font-family: 'Montserrat', sans-serif;
     padding-left: 24em;
     padding-right: 24em;
@@ -37,11 +39,17 @@ h3 {
 
 .navbar {
     width: 100%;
+    padding: 0em;
+}
+
+.navbar div {
+    background: #003F88;
 }
 
 .navbar-collapse {
     display: flex;
     justify-content: center;
+
 }
 
 .navbar-nav {
@@ -53,6 +61,12 @@ h3 {
 
 .nav-item:not(:last-child) {
     margin-right: 1.875em;
+
+}
+
+.navbar .nav-link {
+    color: #FFE383;
+    /* Sets the font color for navbar text items */
 }
 
 
@@ -66,11 +80,11 @@ h3 {
 
 /* +++ custom header +++ */
 .hero-container {
-    background-color: lightgray;
-    padding-top: 12em;
-    padding-bottom: 12em;
+    padding-top: 18em;
+    padding-bottom: 18em;
     padding-left: 3.25em;
     padding-right: 3.25em;
+
 }
 
 .hero-container h1 {
@@ -79,17 +93,32 @@ h3 {
     font-weight: normal;
 }
 
-.blurp {
-    background-color: rgb(233, 233, 233);
+.hero-img img {
+    border-radius: 1em;
+}
+
+.blurb {
+    background-color: #00509D;
+    border-radius: 2em;
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
     padding-right: 3.25em;
 }
 
+.blurb h1 {
+    padding: 0em;
+    margin: 0em;
+
+}
+
+.custom-pill-color {
+    background-color: #00509D;
+    color: #FFE383;
+}
+
 /* +++ my products +++ */
 .my-products-container {
-    background-color: lightgray;
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
@@ -97,11 +126,32 @@ h3 {
 }
 
 .product-section {
-    background-color: lightgray;
+    background-color: #FFE383;
+    font: #003F88;
+    padding: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    /* border: 6px ridge #FFE383; */
+}
+
+.product-button {
+    background-color: #003F88;
+    color: #FFE383;
+}
+
+.main-button {
+    background-color: #FFE383;
+    color: #003F88;
+}
+
+.product-section h2,
+.product-section p {
+    color: #003F88;
+    /* This sets the font color for h2 and p within .product-section */
 }
 
 .about-me-container {
-    background-color: rgb(233, 233, 233);
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
@@ -109,12 +159,20 @@ h3 {
 }
 
 .contact-container {
-    background-color: lightgray;
+    background-color: #FFE383;
+    border-radius: 2em;
     padding-top: 4em;
     padding-bottom: 4em;
     padding-left: 3.25em;
     padding-right: 3.25em;
 }
+
+.contact-container h1,
+.contact-container p {
+    background-color: #FFE383;
+    color: #003F88;
+}
+
 
 .yt-player {
     width: 90%;
