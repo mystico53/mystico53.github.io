@@ -1,27 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize tooltips
+    // init tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
-    // Initialize toasts
-    const toastTrigger = document.getElementById('liveToastBtn');
-    const toastLiveExample = document.getElementById('liveToast');
-    if (toastTrigger) {
-        toastTrigger.addEventListener('click', () => {
-            const toast = new bootstrap.Toast(toastLiveExample);
-            toast.show();
-        });
+
+    // stop videos on close
+    function stopVideoOnModalClose(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            modal.addEventListener('hidden.bs.modal', function () {
+                var iframe = modal.querySelector('iframe');
+                var videoSrc = iframe.src;
+                iframe.src = '';
+                setTimeout(function () {
+                    iframe.src = videoSrc;
+                }, 500);
+            });
+        }
     }
 
-    var youtubeModal = document.getElementById('youtubeModal')
-    youtubeModal.addEventListener('hide.bs.modal', function (event) {
-        var iframe = youtubeModal.querySelector('iframe');
-        var videoSrc = iframe.src;
-        iframe.src = '';
+    stopVideoOnModalClose('JunaitModal');
+    stopVideoOnModalClose('UnionslaborModal');
+
+    document.getElementById('chaosButton').addEventListener('click', function () {
+        var allElements = document.querySelectorAll('body *:not(#chaosButton)');
+
+        // Apply the rotation class
+        allElements.forEach(function (elem) {
+            elem.classList.add('chaos-rotate');
+        });
+
+        // Scroll to the top of the page smoothly
         setTimeout(function () {
-            iframe.src = videoSrc;
-        }, 500);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }, 500); // Delay of 1000 milliseconds
+
+        // Reset the rotation after 1500ms
+        setTimeout(function () {
+            allElements.forEach(function (elem) {
+                elem.classList.remove('chaos-rotate');
+            });
+        }, 1500); // This duration should match the CSS animation duration
     });
+
+
+
+
+
+
 });
