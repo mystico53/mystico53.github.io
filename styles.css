@@ -302,8 +302,8 @@ h3 {
     }
 
     .my-products-container {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     .product-page-container {
