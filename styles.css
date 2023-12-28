@@ -307,13 +307,13 @@ h3 {
     }
 
     .product-page-container {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     .laurel-img {
         /* No need to set display:flex here, because this is for the flex container */
-        flex: 0 0 50%;
+        flex: 0 0 60%;
         /* This will set the basis to 15% and grow and shrink to 0 */
         margin-right: 1rem;
         /* Add some right margin, you can adjust this value */
