@@ -101,15 +101,12 @@ h3 {
 
 .nav-item:not(:last-child) {
     margin-right: 1.875em;
-
 }
 
 .navbar .nav-link {
     color: #FFE383;
-    /* Sets the font color for navbar text items */
+
 }
-
-
 
 /* css for all containers */
 .my-products-container,
@@ -166,7 +163,7 @@ h3 {
 .product-section {
     background-color: #ffffff;
     font: #003F88;
-    font-size: 1.3em;
+    font-size: 1em;
     padding: 4em;
     padding-top: 3em;
     margin-bottom: 3em;
@@ -193,7 +190,6 @@ h3 {
 .product-section h2,
 .product-section p {
     color: #003F88;
-    /* This sets the font color for h2 and p within .product-section */
 }
 
 .about-me-container {
