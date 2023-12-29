@@ -25,7 +25,10 @@ p {
     padding-top: 0em;
     padding-bottom: 0em;
     font-size: 1.3em;
+}
 
+p a {
+    color: #FFE383;
 }
 
 h1 {
@@ -163,13 +166,17 @@ h3 {
 .product-section {
     background-color: #ffffff;
     font: #003F88;
-    font-size: 1.1em;
+    font-size: 1.3em;
     padding: 4em;
     padding-top: 3em;
     margin-bottom: 3em;
     margin-top: 2em;
     border-radius: 1em;
     /* border: 6px ridge #FFE383; */
+}
+
+.product-section p a {
+    color: #00509D;
 }
 
 .product-button {
@@ -285,11 +292,8 @@ h3 {
     }
 
     .laurel-img {
-        /* No need to set display:flex here, because this is for the flex container */
-        flex: 0 0 50%;
-        /* This will set the basis to 15% and grow and shrink to 0 */
-        margin-right: 1rem;
-        /* Add some right margin, you can adjust this value */
+        flex: 0 0 45%;
+        margin-right: 1em;
     }
 
     body {
@@ -297,17 +301,17 @@ h3 {
         padding-right: 0em;
     }
 
-    p {
-        font-size: 0.9em;
-        margin: 0em;
-        padding-bottom: 2em;
-        line-height: 2em;
-    }
-
     .blurb {
         padding: 2em;
         padding-bottom: 14em;
         text-align: justify;
+    }
+
+    p {
+        font-size: 1.3em;
+        margin: 0em;
+        padding-bottom: 2em;
+        line-height: 2em;
     }
 
     .my-products-container {
@@ -331,11 +335,17 @@ h3 {
         padding-right: 1em;
     }
 
-    .laurel-img {
-        /* No need to set display:flex here, because this is for the flex container */
-        flex: 0 0 50%;
-        /* This will set the basis to 15% and grow and shrink to 0 */
-        margin-right: 1rem;
-        /* Add some right margin, you can adjust this value */
+    .custom-pill-color {
+        background-color: #00509D;
+        color: #FFE383;
+        font-size: 1em;
+    }
+
+    .btn-secondary.product-button {
+        font-size: 1.3em;
+    }
+
+    .btn-secondary.main-button {
+        font-size: 1.3em;
     }
 }
