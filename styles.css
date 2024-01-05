@@ -170,8 +170,9 @@ h3 {
 }
 
 .blurb-badge {
-    background-color: transparent !important;
+    background-color: transparent;
     border: 1px solid #FFE383;
+    border-style: outset;
     /* Adjust the border thickness as needed */
     color: #FFE383;
     font-weight: normal;
