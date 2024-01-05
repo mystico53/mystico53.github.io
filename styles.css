@@ -79,6 +79,10 @@ h3 {
     border-radius: 0.3em;
 }
 
+.btn-secondary.main-button {
+    font-size: 1.2em;
+}
+
 /* Optional: To also remove the focus outline after clicking */
 .btn-secondary.main-button:focus {
     outline: none;
@@ -165,6 +169,19 @@ h3 {
     line-height: 2.2;
 }
 
+.blurb-badge {
+    background-color: transparent !important;
+    border: 1px solid #FFE383;
+    /* Adjust the border thickness as needed */
+    color: #FFE383;
+    font-weight: normal;
+    font-size: 1.1em;
+    padding: 0.7em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
 .blurp-text {
     font-size: 1.3em;
 }
@@ -172,6 +189,8 @@ h3 {
 .custom-pill-color {
     background-color: #00509D;
     color: #FFE383;
+    font-size: 1em;
+    font-weight: normal;
 }
 
 /* +++ my products +++ */
@@ -203,6 +222,7 @@ h3 {
     background-color: #003F88;
     color: #FFE383;
     border-radius: 0em;
+    font-size: 1.2em;
 }
 
 .main-button {
@@ -254,6 +274,10 @@ h3 {
 
 }
 
+.laurel-container {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
 
 .laurel-img {
     /* No need to set display:flex here, because this is for the flex container */
