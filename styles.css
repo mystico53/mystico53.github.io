@@ -15,7 +15,7 @@ body {
 }
 
 .chaos-rotate {
-    transition: transform 1500ms;
+    transition: transform 1000ms;
     transform: skew(12deg, 12deg);
     /* Tilt diagonally */
 }
@@ -179,7 +179,8 @@ h3 {
 .blurb-badge {
     background-color: transparent;
     border: 1px solid #FFE383;
-    border-style: outset;
+    border-style: solid;
+    border-radius: 2em;
     /* Adjust the border thickness as needed */
     color: #FFE383;
     font-weight: normal;

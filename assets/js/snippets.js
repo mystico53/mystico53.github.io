@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             allElements.forEach(function (elem) {
                 elem.classList.remove('chaos-rotate');
             });
-        }, 1500); // This duration should match the CSS animation duration
+        }, 1150); // This duration should match the CSS animation duration
     });
 
 
