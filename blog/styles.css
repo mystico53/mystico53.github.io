@@ -1,0 +1,52 @@
+body {
+  background: #003f88;
+  color: #ffe383;
+  font-family: "Montserrat", sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+.my-products-container {
+  padding-left: 2.25em;
+  padding-right: 2.25em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.product-section {
+  background-color: #ffffff;
+  color: #003f88;
+  font-size: 1em;
+  padding: 4em;
+  padding-top: 3em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  border-radius: 1em;
+}
+
+.product-section h1,
+.product-section h2,
+.product-section p {
+  color: #003f88;
+}

@@ -1,0 +1,171 @@
+/* Blog-specific styles with modern readability principles */
+html {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+body {
+  background: #003f88;
+  color: #ffe383;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Content width and readability */
+.blog-container {
+  max-width: min(70ch, 90vw);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Typography scale and vertical rhythm */
+h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+  margin: 3rem 0 1rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.3;
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+}
+
+/* Optimized paragraph styles */
+p {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+  max-width: 70ch;
+}
+
+/* List styling */
+ul,
+ol {
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+}
+
+/* Blog post article styling */
+.blog-article {
+  background-color: #ffffff;
+  color: #003f88;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  margin: 2rem 0;
+  border-radius: 1rem;
+  max-width: 70ch;
+}
+
+.blog-article h1,
+.blog-article h2,
+.blog-article h3,
+.blog-article p,
+.blog-article li {
+  color: #003f88;
+}
+
+/* Featured content boxes */
+.content-highlight {
+  background: #f5f5f5;
+  color: #003f88;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.content-highlight ul,
+.content-highlight ol {
+  margin: 1rem 0;
+}
+
+/* Blog header image */
+.blog-header-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.blog-header-image img {
+  max-width: 100%;
+  border-radius: 1rem;
+  height: auto;
+}
+
+/* Navigation */
+.blog-nav {
+  margin-bottom: 2rem;
+}
+
+.blog-nav a {
+  color: #ffe383;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+/* Post metadata */
+.post-date {
+  color: #00509d;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 2rem;
+}
+
+/* Blog post preview/card on index */
+.post-preview {
+  background-color: #ffffff;
+  color: #003f88;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.post-preview:hover {
+  transform: translateY(-2px);
+}
+
+.post-preview h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .blog-article,
+  .post-preview {
+    padding: 1.5rem;
+  }
+
+  .blog-container {
+    padding: 1rem;
+  }
+
+  p {
+    max-width: 50ch;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .blog-article,
+  .post-preview {
+    background: #f8f9fa;
+  }
+
+  .content-highlight {
+    background: #f0f0f0;
+  }
+}
