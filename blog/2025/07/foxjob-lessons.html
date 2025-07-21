@@ -13,6 +13,59 @@
     <link rel="shortcut icon" href="../../assets/favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../blog-styles.css">
+
+    <!-- Additional styles for our animation container -->
+    <style>
+        /* Animation container - minimal and clean */
+        .animation-stage {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 200px;
+            margin: 2rem 0;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animated elements within our container */
+        .animated-rectangle {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            margin: 0 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .animated-text {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-circle {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .animation-stage {
+                height: 150px;
+            }
+
+            .animated-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -20,6 +73,19 @@
         <nav class="blog-nav">
             <a href="../../index.html">&larr; Back to Blog Main</a>
         </nav>
+
+        <!-- GSAP Animation Container - positioned after navigation -->
+        <div class="animation-stage" id="animationStage">
+            <div class="animated-rectangle" id="rect1"></div>
+            <div class="animated-text" id="welcomeText">Welcome to Job Insights</div>
+            <div class="animated-rectangle" id="rect2"></div>
+
+            <!-- Some floating background elements -->
+            <div class="floating-circle" id="circle1" style="top: 20%; left: 15%;"></div>
+            <div class="floating-circle" id="circle2" style="top: 70%; right: 20%;"></div>
+            <div class="floating-circle" id="circle3" style="top: 40%; right: 10%;"></div>
+        </div>
+
         <article class="blog-article">
             <h1>What if someone is always looking for the next job for you?</h1>
             <p class="post-date">August 2025</p>
@@ -77,6 +143,82 @@
                 I decided to take the risk.</p>
         </article>
     </div>
+
+    <!-- GSAP Library - loaded from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <!-- Our simple animation JavaScript -->
+    <script>
+        // Initialize GSAP animations when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Simple entrance animations - this demonstrates GSAP's clean API
+            // Rectangle 1 slides in from left
+            gsap.from("#rect1", {
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                ease: "back.out(1.7)"
+            });
+
+            // Text fades up from below - notice how simple this syntax is
+            gsap.from("#welcomeText", {
+                y: 50,
+                opacity: 0,
+                duration: 1.2,
+                delay: 0.3,
+                ease: "power2.out"
+            });
+
+            // Rectangle 2 slides in from right
+            gsap.from("#rect2", {
+                x: 100,
+                opacity: 0,
+                duration: 1,
+                delay: 0.2,
+                ease: "back.out(1.7)"
+            });
+
+            // Floating circles with gentle continuous motion
+            // This shows GSAP's timeline capabilities without complexity
+            const floatingAnimation = gsap.timeline({ repeat: -1, yoyo: true });
+
+            floatingAnimation
+                .to("#circle1", {
+                    y: -20,
+                    duration: 3,
+                    ease: "power1.inOut"
+                })
+                .to("#circle2", {
+                    y: 15,
+                    duration: 4,
+                    ease: "power1.inOut"
+                }, 0) // Start at the same time as circle1
+                .to("#circle3", {
+                    y: -25,
+                    duration: 2.5,
+                    ease: "power1.inOut"
+                }, 0.5); // Start 0.5 seconds after the timeline begins
+
+            // Optional: Add hover interactions to rectangles
+            // This demonstrates GSAP's event-driven animations
+            document.getElementById('rect1').addEventListener('mouseenter', function () {
+                gsap.to(this, { scale: 1.1, duration: 0.3, ease: "power2.out" });
+            });
+
+            document.getElementById('rect1').addEventListener('mouseleave', function () {
+                gsap.to(this, { scale: 1, duration: 0.3, ease: "power2.out" });
+            });
+
+            document.getElementById('rect2').addEventListener('mouseenter', function () {
+                gsap.to(this, { scale: 1.1, duration: 0.3, ease: "power2.out" });
+            });
+
+            document.getElementById('rect2').addEventListener('mouseleave', function () {
+                gsap.to(this, { scale: 1, duration: 0.3, ease: "power2.out" });
+            });
+        });
+    </script>
 </body>
 
 </html>
